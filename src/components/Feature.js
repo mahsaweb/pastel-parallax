@@ -1,5 +1,6 @@
-'use client '
+'use client';
 import React from 'react'
+import { motion } from 'framer-motion';
 
 export default function Feature() {
     const data = [
@@ -59,23 +60,39 @@ export default function Feature() {
         }
     ]
     return (
-        <section className="bg-white min-h-screen w-full py-20 px-6 flex flex-col items-center justify-center">
+        <section className="relative z-10 bg-white shadow-2xl min-h-screen w-full py-24 flex flex-col items-center justify-center">
             <div className="text-center mb-12">
-                <h3 className="text-gray-800 text-sm  mb-2 tracking-[0.2em] ">Our Valued Services</h3>
-                <h1 className="text-4xl md:text-6xl font-extralight tracking-tight text-gray-900 leading-none mt-2">
-                    What we Offer</h1>
+                <motion.h3
+                    initial={{ opacity: 0, y: -30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6 }}
+                    className="text-gray-800 text-sm  mb-2  ">Our Valued Services</motion.h3>
+                <motion.h1
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="text-4xl md:text-6xl font-extralight tracking-tight text-gray-900 leading-none mt-2">
+                    What we Offer</motion.h1>
             </div>
 
 
-            <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 px-6 ">
-                {data.map((feature) => (
-                    <div key={feature.id} className="flex flex-col items-center justify-center gap-4 p-4 border rounded-lg shadow-md group hover:shadow-xl transition-shadow duration-300">
+            <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-5 px-6 ">
+                {data.map((feature,index) => (
+                    <motion.div key={feature.id}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.6, delay: (index % 3) * 0.15 }} // تاخیر پله‌ای بین کارت‌ها
+                        whileHover={{ y: -6 }}
+                        className="flex flex-col items-center justify-center gap-4 p-4 border rounded-lg shadow-md bg-gray-50 group hover:shadow-xl transition-shadow duration-300">
 
                         <div className="group-hover:scale-110">{feature.icon}</div>
                         <h3 className="text-gray-800 font-bold ">{feature.title}</h3>
 
                         <p className="text-gray-700 text-sm text-center">{feature.desc}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 

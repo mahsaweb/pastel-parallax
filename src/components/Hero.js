@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className=" relative w-full h-screen bg-[url('/banner.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center">
+    <section className=" sticky top-0 w-full h-screen bg-[url('/banner.jpg')] bg-cover bg-center z-0 flex items-center justify-center">
 
-      <div className="absolute top-2/4 left-1/4 flex flex-col items-center justify-center gap-4 text-center text-white">
+      <div className=" flex flex-col items-center justify-center gap-4 text-center text-white px-4">
         <motion.h3 
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
