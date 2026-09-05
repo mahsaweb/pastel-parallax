@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import Feature from '@/components/Feature';
 import ParallaxBanner from '@/components/ParallaxBanner';
 import ModernWeb from '@/components/ModernWeb';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Feature />
       <ParallaxBanner />
       <ModernWeb />
+      <Projects />
     </main>
   );
 }
