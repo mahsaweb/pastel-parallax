@@ -30,7 +30,6 @@ export default function Navbar() {
         </svg>
       </button>
 
-      {/* کشو Drawer مدرن و تیره */}
       <AnimatePresence>
         {isMenuOpen && (
           <>
@@ -40,21 +39,21 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={closeMenu}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-60"
             />
 
-            {/* پنل کشو با رنگ تیره سنگین و استایل Premium */}
+            {/* menu pannel */}
             <motion.aside
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 w-full sm:w-[420px] h-full bg-[#111111] text-white z-[70] shadow-2xl p-10 flex flex-col justify-between border-l border-white/10"
+              className="fixed top-0 right-0 w-full sm:w-105 h-full bg-[#111111] text-white z-70 shadow-2xl p-10 flex flex-col justify-between border-l border-white/10"
             >
               <div>
-                {/* هدر کشو */}
+                {/* menu header*/}
                 <div className="flex justify-between items-center pb-8 border-b border-white/10">
-                  <span className="text-xl font-semibold tracking-widest text-gray-400 uppercase text-xs">
+                  <span className="text-xl font-semibold tracking-widest text-gray-400 uppercase">
                     Navigation
                   </span>
                   <button
@@ -67,7 +66,7 @@ export default function Navbar() {
                   </button>
                 </div>
 
-                {/* لیست لینک‌ها با انیمیشن ورود تک‌تک (Staggered) */}
+                {/* menu list */}
                 <nav className="flex flex-col gap-6 mt-12">
                   {navLinks.map((link, index) => (
                     <motion.a
@@ -90,10 +89,10 @@ export default function Navbar() {
                 </nav>
               </div>
 
-              {/* فوتر منو برای پر کردن فضای خالی و ظاهری حرفه‌ای‌تر */}
+              {/* menu footer*/}
               <div className="pt-8 border-t border-white/10 flex flex-col gap-2">
                 <span className="text-xs text-gray-500 uppercase tracking-widest">Get In Touch</span>
-                <a href="mailto:info@example.com" className="text-sm text-gray-300 hover:text-[#fe80c0] transition-colors">
+                <a href="mailto:mahsa@portfolio.dev" className="text-sm text-gray-300 hover:text-[#fe80c0] transition-colors">
                   mahsa@portfolio.dev
                 </a>
               </div>
