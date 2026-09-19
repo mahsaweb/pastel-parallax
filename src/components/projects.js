@@ -36,7 +36,7 @@ export default function Projects() {
                 transition={{ duration: 1.6 }}
                 className="w-full h-full flex flex-col items-center justify-center gap-12">
                 <div className="flex flex-col items-center justify-center gap-3 text-center p-10">
-                    <h3 className='capitalize text-gray-800 tracking-widest font-light'> what i do</h3>
+                    <h3 className='capitalize text-gray-800 text-sm'> what i do</h3>
                     <h1 className="capitalize text-2xl font-medium md:text-4xl text-gray-800">latest projects</h1>
                     <div className="w-10 h-0.5 bg-[#7db642] mt-2" />
                 </div>

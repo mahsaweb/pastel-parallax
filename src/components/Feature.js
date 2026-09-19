@@ -60,7 +60,7 @@ export default function Feature() {
         }
     ]
     return (
-        <section className="relative z-10 bg-white shadow-2xl min-h-screen w-full py-24 flex flex-col items-center justify-center">
+        <section className="relative z-10 bg-[#f5efe0] shadow-2xl min-h-screen w-full py-24 flex flex-col items-center justify-center">
             <div className="text-center mb-12">
                 <motion.h3
                     initial={{ opacity: 0, y: -30 }}
