@@ -10,7 +10,7 @@ export default function Projects() {
             title: 'Portfolio',
             subCategory: 'Personal',
             img: '/portfolio.png',
-            colSpan: 'md:col-span-1 md:row-span-2'
+            colSpan: 'md:col-span-1 '
         },
         {
             id: 2,
